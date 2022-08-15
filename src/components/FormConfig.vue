@@ -3,7 +3,7 @@
 		<el-form label-position='top'>
 			<el-form-item :label="$t('fm.config.form.labelPosition.title')">
 				<el-radio-group v-model='data.labelPosition'>
-					<el-radio-button label='left'> {{ $t('fm.config.form.labelPosition.left ') }}</el-radio-button>
+					<el-radio-button label='left'> {{ $t('fm.config.form.labelPosition.left') }}</el-radio-button>
 					<el-radio-button label='right'> {{ $t('fm.config.form.labelPosition.right') }}</el-radio-button>
 					<el-radio-button label='top'> {{ $t('fm.config.form.labelPosition.top') }}</el-radio-button>
 				</el-radio-group>
