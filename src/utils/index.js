@@ -1,5 +1,3 @@
-import { request } from './request'
-
 const loadJS = (url) => {
 	return new Promise((resolve, reject) => {
 		const script = document.createElement('script')
@@ -35,9 +33,16 @@ const generateUUID = () => {
 	return uuid
 }
 
+export { request } from './request'
+
+export {
+	install,
+	MakingForm,
+	GenerateForm
+} from './loadLanguage'
+
 export {
 	generateUUID,
 	loadCSS,
-	loadJS,
-	request
+	loadJS
 }
