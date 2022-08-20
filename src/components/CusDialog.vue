@@ -1,29 +1,29 @@
 <template>
 	<el-dialog
-		class='cus-dialog-container'
-		:title='title'
-		:visible.sync='dialogVisible'
-		:close-on-click-modal='false' ,
-		append-to-body,
-		center,
-		:width='width'
-		ref='elDialog'
-		:id='id'
+		class="cus-dialog-container"
+		:title="title"
+		:visible.sync="dialogVisible"
+		:close-on-click-modal="false"
+		append-to-body
+		center
+		:width="width"
+		ref="elDialog"
+		:id="id"
 	>
-	<span v-if='show'>
-		<slot></slot>
-	</span>
+		<span v-if="show">
+			<slot></slot>
+		</span>
 
 		<span
-			v-if='action'
-			slot='footer'
-			class='dialog-footer'
-			v-loading='loading'
-			:elment-loading-text='loadingText'
+			v-if="action"
+			slot="footer"
+			class="dialog-footer"
+			v-loading="loading"
+			:element-loading-text="loadingText"
 		>
-			<slot name='action'>
-				<el-button @click='close'>{{ $t('fm.actions.cancel') }}</el-button>
-				<el-button type='primary' @click='submit'>
+			<slot name="action">
+				<el-button @click="close">{{ $t('fm.actions.cancel') }}</el-button>
+				<el-button type="primary" @click="submit">
 					{{ $t('fm.actions.confirm') }}
 				</el-button>
 			</slot>
@@ -37,24 +37,24 @@ export default {
 		visible: Boolean,
 		loadingText: {
 			type: String,
-			default: ''
+			default: '',
 		},
 		title: {
 			type: String,
-			default: ''
+			default: '',
 		},
 		width: {
 			type: String,
-			default: '600px'
+			default: '600px',
 		},
 		form: {
 			type: Boolean,
-			default: true
+			default: true,
 		},
 		action: {
 			type: Boolean,
-			default: true
-		}
+			default: true,
+		},
 	},
 	computed: {
 		show() {
@@ -63,14 +63,14 @@ export default {
 			} else {
 				return true
 			}
-		}
+		},
 	},
 	data() {
 		return {
 			loading: false,
 			dialogVisible: this.visible,
 			id: 'dialog_' + new Date().getTime(),
-			showForm: false
+			showForm: false,
 		}
 	},
 	methods: {
@@ -82,14 +82,11 @@ export default {
 
 			this.$emit('on-submit')
 		},
-
 		end() {
 			this.loading = false
-		}
+		},
 	},
-	mounted() {
-
-	},
+	mounted() {},
 	watch: {
 		dialogVisible(val) {
 			if (!val) {
@@ -104,16 +101,16 @@ export default {
 		},
 		visible(val) {
 			this.dialogVisible = val
-		}
-	}
+		},
+	},
 }
 </script>
 
-<style lang='scss'>
+<style lang="scss">
 .cus-dialog-container {
-	.dialog__footer {
+	.el-dialog__footer {
 		margin: 0 20px;
-		// border: 1px dashed #ccc;
+		// border-top: 1px dashed #ccc;
 		padding: 15px 0 16px;
 		text-align: center;
 		position: relative;
