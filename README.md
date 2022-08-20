@@ -1,8 +1,8 @@
 # vue-fort-making
 
-The FormMaing developed on [vue2](https://v2.vuejs.org/index.html) and [element-ui](https://element.eleme.io/#/en-US), built-in i18n international sulution. Aim at making form development simple, and more effciently.
+The FormMaking developed on [vue2](https://v2.vuejs.org/index.html) and [element-ui](https://element.eleme.io/#/en-US), built-in i18n international sulution. Aim at making form development simple, and more efficiently.
 
-### Featue
+### Feature
 
 - International, loading language packs on demand
 - Elegant and beautiful, element ui system
@@ -41,6 +41,6 @@ npm run serve
 
 ### To be solved
 
-- [ ] Import code typesetting error
+- [x] Import code typesetting error
 - [x] i18n
 
