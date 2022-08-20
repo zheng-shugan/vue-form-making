@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import Home from '../demo/Home'
-import LanguageView from './LanguageView'
+import Home from '../views/Home.vue'
+import LanguageView from '../views/LanguageView.vue'
 
 Vue.use(Router)
 
@@ -12,7 +12,7 @@ export default new Router({
 	routes: [
 		{
 			path: '/',
-			redirect: to => ({ name: 'index', params: { lang: language }})
+			redirect: to => ({ name: 'index', params: { lang: language } })
 		},
 		{
 			path: '/:lang',
