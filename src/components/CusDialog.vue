@@ -3,23 +3,23 @@
 		class='cus-dialog-container'
 		:title='title'
 		:visible.sync='dialogVisible'
-		:close-on-click-modal='false' ,
-		append-to-body,
-		center,
+		:close-on-click-modal='false'
+		append-to-body
+		center
 		:width='width'
 		ref='elDialog'
 		:id='id'
 	>
-	<span v-if='show'>
-		<slot></slot>
-	</span>
+		<span v-if='show'>
+			<slot></slot>
+		</span>
 
 		<span
 			v-if='action'
 			slot='footer'
 			class='dialog-footer'
 			v-loading='loading'
-			:elment-loading-text='loadingText'
+			:element-loading-text='loadingText'
 		>
 			<slot name='action'>
 				<el-button @click='close'>{{ $t('fm.actions.cancel') }}</el-button>
@@ -82,13 +82,11 @@ export default {
 
 			this.$emit('on-submit')
 		},
-
 		end() {
 			this.loading = false
 		}
 	},
 	mounted() {
-
 	},
 	watch: {
 		dialogVisible(val) {
@@ -111,9 +109,9 @@ export default {
 
 <style lang='scss'>
 .cus-dialog-container {
-	.dialog__footer {
+	.el-dialog__footer {
 		margin: 0 20px;
-		// border: 1px dashed #ccc;
+		// border-top: 1px dashed #ccc;
 		padding: 15px 0 16px;
 		text-align: center;
 		position: relative;
