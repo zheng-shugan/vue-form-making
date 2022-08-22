@@ -4,22 +4,15 @@
 			<img class='fm-logo' src='./assets/logo.png'>
 			<div class='fm-title' @click='handleHome'>{{ $t('header.title') }}</div>
 
-			<iframe style='vertical-align: middle;margin-top:10px;margin-left: 10px;'
-			        src='https://ghbtns.com/github-btn.html?user=GavinZhulei&repo=vue-form-making&type=star&count=true'
-			        frameborder='0' scrolling='0' width='160px' height='30px'></iframe>
-
 			<div class='fm-link'>
-
-				<a class='ad' href='http://form.xiaoyaoji.cn' target='_blank'>{{ $t('header.advanced') }}</a>
-				<a target='_blank' href='https://gitee.com/gavinzhulei/vue-form-making/blob/master/README.zh-CN.md'
+				<a target='_blank' href='https://github.com/zheng-shugan/vue-form-making/blob/master/README.md'
 				   v-if="$i18n.locale === 'zh-CN'">{{ $t('header.document') }}
 				</a>
-				<a target='_blank' href='https://github.com/GavinZhuLei/vue-form-making/blob/master/README.md'
+				<a target='_blank' href='https://github.com/zheng-shugan/vue-form-making/blob/master/docs/README-zh_CN.md'
 				   v-if="$i18n.locale === 'en-US'">{{ $t('header.document') }}
 				</a>
 
-				<a target='_blank' href='https://gitee.com/gavinzhulei/vue-form-making' v-if="$i18n.locale === 'zh-CN'">Gitee</a>
-				<a target='_blank' href='https://github.com/GavinZhuLei/vue-form-making'>GitHub</a>
+				<a target='_blank' href='https://github.com/zheng-shugan/vue-form-making'>GitHub</a>
 
 				<div class='action-item'>
 					<el-dropdown trigger='click' @command='handleLangCommand'>
